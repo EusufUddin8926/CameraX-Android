@@ -134,7 +134,7 @@ public class MainActivity extends AppCompatActivity {
                     @Override
                     public void run() {
                         Toast.makeText(MainActivity.this, "Image saved at: " + file.getPath(), Toast.LENGTH_SHORT).show();
-                        previewPhoto(file.getAbsolutePath());
+                        previewPhoto(Utils.compressImage(file.getAbsolutePath(), "preview_image"));
                     }
                 });
                 startCamera(cameraFacing);
